@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      .swiper {
+        height: 500px;
+        width: 550px;
+      }
+      .swiper-slide {
+        background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } 
+      .swiper-slide img{
+        margin: 0 auto;
+        padding-left: 25px;
+      }
+      .icons{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        color:gold;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      .icons-text{
+        color:white;
+        text-align: center;
+      }
+      .swiper-pagination{
+        color:white;
+      }
+      .mycontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+       background-image: url(swiperpic.jpg);
+       background-size: cover;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        padding: 20px;
+        /* width:100%; */
+      }
+      .btn{
+        border-radius: 5px;
+        padding:12px 10px;
+        border:none;
+      }
+
+/* .container{
+  padding-right: 40px;
+} */
+/*  */
+    </style>
+  </head>
+  <body>
+    <!-- Slider main container -->
+<div class="mycontainer">
+    <div class="container">
+      <div class="text-head" style="margin-right: 30px;" >
+        <h1 class="text-h">
+          Learn Tech, Build Dreams – Empower Your Future with Alqomorytech!
+        </h1>
+        <p class="content" style="padding-right: 25px;">
+          At Alqomorytech, we turn beginners into tech professionals. Learn web development, coding, and programming with hands-on projects and expert guidance. Earn certifications that set you apart and kickstart your tech career today!
+        </p>
+        <button class="btn">Start Your Journey Today &rarr;</button>
+      </div>
+    </div>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><div class="container"><img width="500px" src="./AmazonImage/beauty products.jpg" />
+            <div class="icons">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="icons-text">
+                <h3>JavaScript</h3>
+                <p>A Highleve objected Oriented Multiparadigm programming language</p>
+            </div>
+        </div>
+          
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <img width="500px" src="./AmazonImage/New Arrival in toys.jpg" />
+                <div class="icons">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="icons-text">
+                    <h3>Css</h3>
+                    <p>Leaning how the style works and how make it look more attractive</p>
+                </div>
+            </div>
+         
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <img width="400px" height="300px" src="./blog1.jpg" />
+                <div class="icons">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="icons-text">
+                    <h3>Pyhton Programming</h3>
+                    <p>The Choice of making a robust App with a flexible language</p>
+                </div>
+            </div></div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        // direction: 'vertical',
+        // loop: true,
+        // effect: {
+        //     effect: "fade",
+        //   },
+        
+       effect: 'cube',
+       grabCursor: 'true',
+    //    loop:true,
+       speed:2000,
+    //    cubeEffect: {
+    //     shadow:false,
+    //     slideShadow:true,
+    //     shadowOffset: 10,
+    //     shadowScale:1.7
+
+    //    },
+
+
+        autoplay: {
+          delay: 2000,
+        },
+        // breakpoints: {
+        //   769: {
+        //     slidesPerView: 2,
+        //     slidesPerGroup: 2,
+        //   },
+        // },
+
+        // breakpoints: {
+        //   1200: {
+        //     slidePerView: 3,
+        //     slidesPerGroup: 3,
+        //   },
+        // },
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>
